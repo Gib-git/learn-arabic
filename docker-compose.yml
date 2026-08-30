@@ -1,0 +1,17 @@
+services:
+  learn-arabic:
+    build: .
+    ports:
+      - "3026:3026"
+    env_file: .env
+    environment:
+      PORT: 3026
+      DATA_DIR: /app/data
+    volumes:
+      - learn-arabic-data:/app/data
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: unless-stopped
+
+volumes:
+  learn-arabic-data:

@@ -1,0 +1,38 @@
+{
+  "name": "learn-arabic",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Quranic Arabic learning platform — lessons, spaced-repetition flashcards, graded Quran reader, and study stats",
+  "scripts": {
+    "dev": "concurrently -n server,web -c blue,green \"tsx watch server/index.ts\" \"vite\"",
+    "dev:server": "tsx watch server/index.ts",
+    "dev:web": "vite",
+    "build": "vite build",
+    "typecheck": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p server/tsconfig.json",
+    "start": "tsx server/index.ts"
+  },
+  "dependencies": {
+    "@fontsource-variable/inter": "^5.3.0",
+    "@fontsource/amiri": "^5.1.0",
+    "better-sqlite3": "^11.7.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.28.0",
+    "tsx": "^4.19.2",
+    "zustand": "^5.0.2"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.12",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.10.2",
+    "@types/react": "^18.3.17",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "concurrently": "^9.1.0",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.3"
+  }
+}
