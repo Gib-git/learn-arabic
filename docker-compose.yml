@@ -11,6 +11,7 @@ services:
       - learn-arabic-data:/app/data
     extra_hosts:
       - "host.docker.internal:host-gateway"
+    network_mode: bridge
     restart: unless-stopped
 
 volumes:
